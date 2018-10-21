@@ -1,0 +1,19 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    openssl (2.1.0)
+    os (0.9.6)
+    sane (0.25.8)
+      os (~> 0)
+    thor (0.20.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  openssl
+  sane
+  thor
+
+BUNDLED WITH
+   1.16.6

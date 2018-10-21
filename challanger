@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__)), 'lib')
+
+require 'challanger'
+
+$stdout.sync = true
+Challanger::App::start(ARGV)
