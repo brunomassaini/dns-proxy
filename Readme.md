@@ -32,10 +32,10 @@ gem install bundler
 bundle install
 ```
 
-Executing a sample command (you need sudo depending on the port you use):
+Executing a sample command (you need sudo depending on the port you use):  
 `sudo ./challanger dns_over_tls start --local-addr '127.0.0.1' --local-port 53 --remote-addr '1.1.1.1' --remote-port 853`
 
-Also there's a help option that you can use in case of need:
+Also there's a help option that you can use in case of need:  
 `./challanger dns_over_tls --help`
 
 ---
@@ -51,10 +51,10 @@ docker build -t challanger .
 
 ### Validate
 
-Query a domain using your local tcp proxy:
-`ig www.google.com @127.0.0.1 +tcp`
+Query a domain using your local tcp proxy:  
+`dig www.google.com @127.0.0.1 +tcp`
 
-Run the cointainer! (bear in mind that "127.0.0.1" as `local-addr` when running the container would only listen to requests from within the container so you probably want to listen to requests from the outside world)
+Run the cointainer! (bear in mind that "127.0.0.1" as `local-addr` when running the container would only listen to requests from within the container so you probably want to listen to requests from the outside world)  
 `docker run -it -p 127.0.0.1:53:53 challanger dns_over_tls start --local-addr '0.0.0.0' --local-port 53 --remote-addr '1.1.1.1' --remote-port 853`
 
 ### Todos
