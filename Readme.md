@@ -7,7 +7,7 @@ cli / docker image the runs a local TCP proxy server forwarding over TLS to a re
 
 `challenger` is a cli tool that enables you to start a listener on a specific tcp port forwarding to a remote server over TLS. It was created with the goal of handling DNS over TLS proxying but can actually be used for other use cases.
 
-It can be useful and easy to implement if you run your applications on kubernetes and you don't want the risk of a Man-in-the-middle / sniffing attack over your DNS traffic. It's easy to run as a daemonset, for example, and handle requests from other containers inside the cluster and transmiting those requests over TLS to the nameserver. No DNS/TCP traffic using this solution would get out of the cluster unencrypted.
+It can be useful and easy to implement if you run your applications on kubernetes (for example) and you don't want the risk of a Man-in-the-middle / sniffing attack over your DNS traffic. It's easy to run as a daemonset, for example, and handle requests from other containers inside the cluster and forwarding those requests over TLS to the nameserver. No DNS/TCP traffic using this solution would get out of the cluster unencrypted.
 
 ### How it works
 
