@@ -49,13 +49,13 @@ Build the image
 docker build -t challanger .
 ```
 
+Run the cointainer! (bear in mind that "127.0.0.1" as `local-addr` when running the container would only listen to requests from within the container so you probably want to listen to requests from the outside world)  
+`docker run -it -p 127.0.0.1:53:53 challanger dns_over_tls start --local-addr '0.0.0.0' --local-port 53 --remote-addr '1.1.1.1' --remote-port 853`
+
 ### Validate
 
 Query a domain using your local tcp proxy:  
 `dig www.google.com @127.0.0.1 +tcp`
-
-Run the cointainer! (bear in mind that "127.0.0.1" as `local-addr` when running the container would only listen to requests from within the container so you probably want to listen to requests from the outside world)  
-`docker run -it -p 127.0.0.1:53:53 challanger dns_over_tls start --local-addr '0.0.0.0' --local-port 53 --remote-addr '1.1.1.1' --remote-port 853`
 
 ### Todos
  - security concerns:
