@@ -19,6 +19,8 @@ It can be useful and easy to implement if you run your applications on kubernete
 |--remote_port   | Remote server port: `853` |
 
 ### Installation
+
+---
 ##### *cli (executing localy without docker)*
 
 It's a ruby cli, so it's implicit you need ruby installed :)
@@ -36,6 +38,7 @@ Executing a sample command (you need sudo depending on the port you use):
 Also there's a help option that you can use in case of need:
 `./challanger dns_over_tls --help`
 
+---
 ##### *docker*
 
 It's docker, so once again it's implicit you need docker :D
